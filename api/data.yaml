@@ -1,0 +1,13 @@
+train: ./train/images
+val: ./valid/images
+test: ./test/images
+
+nc: 23
+names: ['2', '3', '4', '5', '6', '7', '8', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'K', 'M', 'N', 'P', 'R', 'W', 'X', 'Y']
+
+roboflow:
+  workspace: captcha-wvcae
+  project: traces-xp48r
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/captcha-wvcae/traces-xp48r/dataset/2
