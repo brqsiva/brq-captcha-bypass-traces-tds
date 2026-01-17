@@ -53,7 +53,7 @@ const MultipleCaptcha = () => {
               pngFiles.slice(0, 3).forEach(file => addLog(`  ${file}`));
 
               // Take first 50 files
-              const filesToUse = pngFiles.slice(0, 200);
+              const filesToUse = pngFiles.slice(0, 400);
               setImageFiles(filesToUse);
               addLog(`Using first ${filesToUse.length} files for benchmark`);
               return;
@@ -568,7 +568,7 @@ const MultipleCaptcha = () => {
         ];
 
         if (knownGUIDs.length > 0) {
-          setImageFiles(knownGUIDs.slice(0, 200));
+          setImageFiles(knownGUIDs.slice(0, 400));
           addLog(`Using ${knownGUIDs.length} manually specified GUID files`);
           return;
         }
@@ -606,7 +606,7 @@ const MultipleCaptcha = () => {
   }, []);
 
   // Rest of your component remains mostly the same, just using GUID filenames
-  const processImageBatch = async (imageNames, concurrentLimit = 200) => {
+  const processImageBatch = async (imageNames, concurrentLimit = 400) => {
     const results = [];
     let processed = 0;
     let successful = 0;
@@ -763,7 +763,7 @@ const MultipleCaptcha = () => {
     try {
       const startTime = Date.now();
 
-      const { results: processedResults, successful, failed } = await processImageBatch(imageFiles, 200);
+      const { results: processedResults, successful, failed } = await processImageBatch(imageFiles, 400);
 
       const endTime = Date.now();
       const totalTime = (endTime - startTime) / 1000;

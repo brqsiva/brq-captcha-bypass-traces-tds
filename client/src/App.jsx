@@ -5,8 +5,8 @@ import SingleCaptcha from './components/singlecaptcha';
 function App() {
   return(
     <>
-    {/* <MultipleCaptcha/> */}
-    <SingleCaptcha/>
+    <MultipleCaptcha/>
+    {/* <SingleCaptcha/> */}
     </>
   );
 
